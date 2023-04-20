@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Kohl1998/fitness-application/static/css/main.073c9b0a.css",
+    "main.js": "/Kohl1998/fitness-application/static/js/main.e73fa818.js",
+    "static/js/787.6be84114.chunk.js": "/Kohl1998/fitness-application/static/js/787.6be84114.chunk.js",
+    "static/media/logo.svg": "/Kohl1998/fitness-application/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Kohl1998/fitness-application/index.html",
+    "main.073c9b0a.css.map": "/Kohl1998/fitness-application/static/css/main.073c9b0a.css.map",
+    "main.e73fa818.js.map": "/Kohl1998/fitness-application/static/js/main.e73fa818.js.map",
+    "787.6be84114.chunk.js.map": "/Kohl1998/fitness-application/static/js/787.6be84114.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e73fa818.js"
+  ]
+}
