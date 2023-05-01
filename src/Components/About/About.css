@@ -1,0 +1,13 @@
+.wrapper {
+    margin: auto;
+    height: 150px;
+}
+
+.wrapper h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.wrapper p {
+text-align: center;
+}
