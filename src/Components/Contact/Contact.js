@@ -1,45 +1,83 @@
-import React, { useState } from "react";
-import "./Contact.css"
+import React, { useRef } from "react";
+import emailjs, { init } from "@emailjs/browser";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer"
+import "./Contact.css"
 
 
 // Add validation to check for user input 
 // Use Email Js to send emails without backend
 
-const Contact = () => {
-    const [name, updateName] = useState('')
-    const [email, updateEmail] = useState('')
-    const [message, updateMessage] = useState('')
-    const [error, updateError] = useState('')
-    
-    console.log(name, email, message)
+
+function Contact() {
+    init("6GM97vw1k7n549Fc5")
+    {/* accesses all data fields on form */}
+    const form = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(
+            "service_60jd348",
+            "template_nv9zpj7",
+            e.target,
+            "6GM97vw1k7n549Fc5"
+        )
+            .then(
+                (result) => {
+                    alert("Message Sent Successfully");
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
 
     return (
         <>
             <Navbar />
-            <form className="form-wrapper">
-            <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input type="text" className="form-control" onChange={(e) => updateName(e.target.value)}/>
+            <div className="container">
+                <form onSubmit={handleSubmit} ref={form}>
+                    <h1 className="text-center">Registration Form</h1>
+                    <div className="form-row">
+                        <div className="form-group col-md-6">
+                            <label htmlFor="First Name">First Name</label>
+                            <input type="text" className="form-control" placeholder="John"  name="firstname" />
+                        </div>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="Last Name">Last Name</label>
+                            <input type="text" placeholder="Smith"  className="form-control" name="lastname" />
+                        </div>
+                        <div className="form-group col-12">
+                            <label htmlFor="inputAddress">Address</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="inputAddress"
+                                placeholder="1234 Main St"
+                                name="user_address"
+                            />
+                        </div>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="message">message</label>
+                            <textarea
+                                type="text"
+                                className="form-control"
+                                id="inputmessage4"
+                                name="user_message"
+                            />
+                        </div>
+                    </div>
+                    <div className="button-wrapper">
+                    <button type="submit" className="btn btn-dark">
+                        Submit
+                    </button>
+                    </div>
+                </form>
             </div>
-            <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" className="form-control"  onChange={(e) => updateEmail(e.target.value)}/>
-            </div>
-            <div className="form-group">
-            <label htmlFor="message">message</label>
-            <input type="text" className="form-control" style={{height: "200px"}}  onChange={(e) => updateMessage(e.target.value)}/>
-            </div>
-            <div className="form-button">
-            <button type="submit" onClick={(e) => e.preventDefault()}>Submit</button>
-            </div>
-            </form>
             <Footer />
         </>
-    )
-
-
+    );
 }
 
 
