@@ -4,7 +4,21 @@
     margin-top: 10px;
 }
 
-.social-links ul {
+.social-links ul a{
     margin: 5px;
 }
+
+.footer-text {
+    color: #000;
+    text-align: center;
+}
+
+.footer-text a{
+    font-size: 18px;
+}
+
+.footer {
+    background-color: #E5E4E2;
+}
+
 

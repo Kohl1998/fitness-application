@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import "./Footer.css"
 
 
 // Taken from Material UI 
@@ -11,13 +12,11 @@ import Link from '@mui/material/Link';
 function Copyright() {
     return (
         <>
-        <Typography variant="body2" color="text.secondary">
-            {'Copyright © '}
-            <Link color="inherit"  target="_blank" href="https://fightzonelondon.co.uk/">
-                Fight Zone Mock up by Kohl Vernon
+        <Typography variant="body2"  className='footer-text'>
+            <Link style={{color: 'black'}}  target="_blank" href="https://fightzonelondon.co.uk/">
+            Copyright © Fight Zone Mock up by Kohl Vernon
             </Link>{' '}
             {new Date().getFullYear()}
-            {'.'}
         </Typography>
         <br></br>
         <div className='social-links'>
@@ -28,6 +27,8 @@ function Copyright() {
             <a href='https://www.google.co.uk/search?q=fightzone+locations&sxsrf=APwXEdcB54DE_xNa_NdIBFC8IFh1fTb64g%3A1682950786333&ei=gspPZLSzE8mXgQaYxKjoCg&oq=fightzone+loca&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgUIIRCgATIFCCEQoAEyBQghEKABOgoIABBHENYEELADOgcIIxCKBRAnOggIABCKBRCRAjoFCAAQgAQ6CwguEK8BEMcBEIAESgQIQRgAUMkLWNAXYLkeaAFwAXgAgAGdAYgBlgSSAQMwLjSYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp' target='_blank'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
             </a>
+            {/* Takes user to my email */}
+            <button onClick={() => window.location = 'mailto:kohlwebdev@gmail.com'}>Contact Me</button>
         </ul>
         </div>
         </>
@@ -49,21 +50,15 @@ export default function StickyFooter() {
                 </Typography>
             </Container>
             <Box
+                className='footer'
                 component="footer"
                 sx={{
                     py: 3,
                     px: 2,
                     mt: 'auto',
-                    backgroundColor: (theme) =>
-                        theme.palette.mode === 'light'
-                            ? theme.palette.grey[200]
-                            : theme.palette.grey[800],
                 }}
             >
                 <Container maxWidth="sm">
-                    <Typography variant="body1">
-                        My sticky footer can be found here.
-                    </Typography>
                     <Copyright />
                 </Container>
             </Box>
