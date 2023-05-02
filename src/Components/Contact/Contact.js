@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer"
@@ -10,12 +10,21 @@ import "./Contact.css"
 
 
 function Contact() {
+    const [firstName, updateFirstName] = useState('')
+    const [lastName, updateLastName] = useState('')
+    const [address, updateAddress] = useState('')
+    const [message, updateMessage] = useState('')
+
+    console.log(firstName, lastName, address, message)
+
     init("6GM97vw1k7n549Fc5")
     {/* accesses all data fields on form */}
     const form = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // if ()
+
         emailjs.sendForm(
             "service_60jd348",
             "template_nv9zpj7",
@@ -31,40 +40,45 @@ function Contact() {
                     console.log(error.text);
                 }
             );
-    };
+    
+        };
 
     return (
         <>
             <Navbar />
-            <div className="container">
                 <form onSubmit={handleSubmit} ref={form}>
-                    <h1 className="text-center">Registration Form</h1>
+                    <h1 className="text-center" style={{marginTop: '15px'}}>Enquire</h1>
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label htmlFor="First Name">First Name</label>
-                            <input type="text" className="form-control" placeholder="John"  name="firstname" />
+                            <input type="text" className="form-control" placeholder="John"  name="firstname"  value={firstName}  required onChange={(e) => updateFirstName(e.target.value)}/>
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="Last Name">Last Name</label>
-                            <input type="text" placeholder="Smith"  className="form-control" name="lastname" />
+                            <input type="text" placeholder="Smith"  className="form-control" name="lastname" value={lastName}  required onChange={(e) => updateLastName(e.target.value)}/>
                         </div>
                         <div className="form-group col-12">
                             <label htmlFor="inputAddress">Address</label>
                             <input
+                                onChange={(e) => updateAddress(e.target.value)}
                                 type="text"
                                 className="form-control"
                                 id="inputAddress"
                                 placeholder="1234 Main St"
                                 name="user_address"
+                                value={address}
                             />
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="message">message</label>
                             <textarea
+                                onChange={(e) => updateMessage(e.target.value)}
                                 type="text"
                                 className="form-control"
                                 id="inputmessage4"
                                 name="user_message"
+                                value={message}
+                                required
                             />
                         </div>
                     </div>
@@ -74,7 +88,6 @@ function Contact() {
                     </button>
                     </div>
                 </form>
-            </div>
             <Footer />
         </>
     );
