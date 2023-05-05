@@ -1,6 +1,7 @@
 .wrapper {
     margin: auto;
-    height: 150px;
+    margin-top: 50px;
+    height: 120px;
 }
 
 .wrapper h3 {
@@ -10,4 +11,22 @@
 
 .wrapper p {
 text-align: center;
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.YT-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+@media only screen and (max-width: 480px) {
+.YT-video iframe{
+    margin-top: 200px;
+}
+.wrapper p{
+padding-left: 30px;
+padding-right: 40px;
+}
 }
