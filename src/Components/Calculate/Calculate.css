@@ -1,5 +1,4 @@
 .calculator-wrapper {
-    height: 20vh;
     width: 100%;
 }
 
@@ -7,4 +6,17 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+.calculator-wrapper {
+    margin-top: 50px;
+}
+.button-container button {
+    margin-top: 30px;
+}
+/* imaginery div to create space between content and sticky footer */ 
+.block {
+    height: 50px;
+}
 }
