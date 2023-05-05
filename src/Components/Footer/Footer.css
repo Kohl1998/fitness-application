@@ -8,6 +8,14 @@
     margin: 5px;
 }
 
+.footer-container {
+    height: 20vh;
+}
+
+.calculator-wrapper {
+    margin-top: 120px;
+}
+
 .footer-text {
     color: #000;
     text-align: center;

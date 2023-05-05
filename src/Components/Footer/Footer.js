@@ -12,6 +12,8 @@ import "./Footer.css"
 function Copyright() {
     return (
         <>
+        <div className='false'></div>
+        <footer className='footer-container'> 
         <Typography variant="body2"  className='footer-text'>
             <Link style={{color: 'black'}}  target="_blank" href="https://fightzonelondon.co.uk/">
             Copyright © Fight Zone Mock up by Kohl Vernon
@@ -31,6 +33,7 @@ function Copyright() {
             <button onClick={() => window.location = 'mailto:kohlwebdev@gmail.com'}>Contact Me</button>
         </ul>
         </div>
+        </footer>
         </>
     );
 }
