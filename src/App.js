@@ -1,11 +1,12 @@
 import './App.css';
 import React from 'react';
 import {Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'
-import Services from './pages/Services'
-import Testimonials from './pages/Testimonials'
-import Contact from './pages/Contact'
-import Error from './pages/Error'
+import Home from './Components/Home/Home'
+import Services from "./Components/Services/Services"
+import Testimonials from './Components/Testimonials/Testimonials'
+import Contact from './Components/Contact/Contact'
+import Calculate from './Components/Calculate/Calculate'
+import Error from './Components/Error/Error'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     <Route path='/services' element={<Services />} />
                     <Route path='/testimonials' element={<Testimonials />} />
                     <Route path='/contact' element={<Contact />} />
+                    <Route path='/calculate' element={<Calculate />} />
                     <Route path='*' element={<Error />} />
                 </Routes>
         </>
