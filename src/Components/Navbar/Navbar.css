@@ -36,6 +36,19 @@
     font-size: 30px;
 }
 
+@media only screen and (max-width: 934px) {
+   .nav {
+    height: 100px;
+   }
+
+    .nav ul a{
+    font-size: 26px;
+    }
+    .site-title {
+        margin-left: 14px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
 .site-title {
     margin-left: auto;

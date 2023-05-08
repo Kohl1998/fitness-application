@@ -8,6 +8,43 @@
     margin-top: 10px;
 }
 
+@media only screen and (max-width: 934px) {
+    .calculator-wrapper {
+        margin-top: 160px;
+    }
+
+    .form-control {
+        padding: 35px;
+    }
+
+    .fighter {
+        height: 300px;
+    }
+
+    .form-group input::placeholder {
+        font-size: 24px;
+        color: #000;
+    }
+
+    .form-group {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .form-group label {
+        font-size: 30px;
+    }
+
+    .block {
+        height: 400px;
+    }
+    .button-container  button {
+        margin-top: 10px;
+        font-size: 35px;
+        width: 150px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
 .calculator-wrapper {
     margin-top: 50px;

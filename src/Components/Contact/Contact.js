@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs, { init } from "@emailjs/browser";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Contact.css"
 
 
@@ -47,7 +48,7 @@ function Contact() {
         <>
             <Navbar />
                 <form onSubmit={handleSubmit} ref={form}>
-                    <h1 className="text-center" style={{marginTop: '15px'}}>Enquire</h1>
+                    <h1 className="text-center">Enquire</h1>
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label htmlFor="First Name">First Name</label>
@@ -87,6 +88,7 @@ function Contact() {
                         Submit
                     </button>
                     </div>
+                    <div className="separator"></div>
                 </form>
             <Footer />
         </>

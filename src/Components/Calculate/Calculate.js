@@ -41,7 +41,7 @@ const Calculate = () => {
             </div>
             <div className="form-group col-md-6  col-sm-12">
                 <label htmlFor="Fighter">Enter fighter:  </label>
-                <input type="text" placeholder="Khabib" className="form-control" name="fighter" value={fighter} required onChange={(e) => setFighter(e.target.value)} />
+                <input type="text" placeholder="Khabib" className="form-control fighter" name="fighter" value={fighter} required onChange={(e) => setFighter(e.target.value)} />
             </div>
             <div className="button-container">
                 <button type="submit" onClick={() => options}>Search</button>
