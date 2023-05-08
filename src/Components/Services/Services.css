@@ -33,6 +33,22 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 934px) {
+    .service-title {
+        font-size: 28px;
+    }
+    .service-description {
+        font-size: 26px;
+        padding: 10px;
+    }
+    .pricing {
+        font-size: 24px;
+    }
+    .enquiries {
+        font-size: 26px;
+    }
+}
+
 @media only screen and (max-width: 480px)  {
     .service-description {
         padding-left: 30px;
