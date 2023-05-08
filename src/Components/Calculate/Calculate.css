@@ -52,6 +52,11 @@
 .button-container button {
     margin-top: 30px;
 }
+
+.fighter {
+    height: 200px;
+}
+
 /* imaginery div to create space between content and sticky footer */ 
 .block {
     height: 50px;

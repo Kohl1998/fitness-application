@@ -68,6 +68,10 @@ Footer {
 form {
     margin-top: 40px;
 }
+
+.form-control {
+padding: 20px;
+}
 .btn {
     background-color: #000;
     font-size: 20px;
